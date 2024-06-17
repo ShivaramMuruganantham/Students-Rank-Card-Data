@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+        th{
+            border: 1px solid black;
+        }
+        td{
+            border: 1px solid black;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex justify-around items-center bg-[#2fb171]">
+    <div class="relative w-[350px] h-[550px] bg-white rounded-xl">
+        <div class=" flex justify-around items-center pt-10">
+            <form action="">
+                <h2 class="font-bold text-lg pb-8 text-orange-400">Students Report Card</h2>
+                
+                <div class="p-1">
+                    <p class="text-sm font-medium text-[#ff9000]">Roll no: <span class="pb-1"><small id="err1"></small></span></p>
+                    <div class="flex gap-3">
+                        <input type="tel" id="roll_no"  maxlength="5" class="border-b-2 border-[#2fb171] outline-none" required>
+                        <span id="err1_i" class="hidden"><i class="bi bi-exclamation-circle text-red-500"></i></span>
+                    </div>
+                </div>
+    
+                <div class="p-1">
+                    <p class="text-sm font-medium text-[#ff9000]">Name:  <span class="pb-1"><small id="err2"></small></span></p>
+                    <div class="flex gap-3">
+                        <input type="text" id="name"  class="border-b-2 border-[#2fb171] outline-none" required>
+                        <span id="err2_i" class="hidden"><i class="bi bi-exclamation-circle text-red-500"></i></span>
+                    </div>
+                </div>
+                
+                <div class="p-1">
+                    <p class="text-sm font-medium text-[#ff9000]">Tamil: <span class="pb-1"><small id="err3"></small></span></p>
+                    <div class="flex gap-3">
+                        <input type="tel" id="tamil"  maxlength="3" class="border-b-2 border-[#2fb171] outline-none" required>
+                        <span id="err3_i" class="hidden"><i class="bi bi-exclamation-circle text-red-500"></i></span>
+                    </div>
+                    
+                </div>
+    
+                <div class="p-1">
+                    <p class="text-sm font-medium text-[#ff9000]">English: <span class="pb-1"><small id="err4"></small></span></p>
+                    <div class="flex gap-3">
+                        <input type="tel" id="english"  maxlength="3" class="border-b-2 border-[#2fb171] outline-none" required>
+                        <span id="err4_i" class="hidden"><i class="bi bi-exclamation-circle text-red-500"></i></span>
+                    </div>
+                    
+                </div>
+    
+                <div class="p-1">
+                    <p class="text-sm font-medium text-[#ff9000]">Maths: <span class="pb-1"><small id="err5"></small></span></p>
+                    <div class="flex gap-3">
+                        <input type="tel" id="maths"  maxlength="3" class="border-b-2 border-[#2fb171] outline-none" required>
+                        <span id="err5_i" class="hidden"><i class="bi bi-exclamation-circle text-red-500"></i></span>
+                    </div>
+                    
+                </div>
+                
+                <div class="p-1">
+                    <p class="text-sm font-medium text-[#ff9000]">Science: <span class="pb-1"><small id="err6"></small></span></p>
+                    <div class="flex gap-3">
+                        <input type="tel" id="science"  maxlength="3" class="border-b-2 border-[#2fb171] outline-none" required>
+                        <span id="err6_i" class="hidden"><i class="bi bi-exclamation-circle text-red-500"></i></span>
+                    </div>
+                    
+                </div>
+                
+                <div class="p-1">
+                    <p class="text-sm font-medium text-[#ff9000]">Social: <span class="pb-1"><small id="err7"></small></span></p>
+                    <div class="flex gap-3">
+                        <input type="tel" id="social"  maxlength="3" class="border-b-2 border-[#2fb171] outline-none" required>
+                        <span id="err7_i" class="hidden"><i class="bi bi-exclamation-circle text-red-500"></i></span>
+                    </div>
+                    
+                </div>
+                
+                <div class="text-center mt-2">
+                    <button type="button" class="border px-5 py-2 bg-[#2fb171] font-medium text-white" onclick="btnclick()">Submit</button>
+                </div>
+    
+            </form>
+        </div>
+    </div>
+    
+    <div id="continer" class="bg-white">
+        <table id="table" class="border p-1" style="border-collapse: collapse ; border: rgb(8, 8, 5) 2px solid;">
+            <thead id="table_head" class="border" style="border-collapse: collapse ; border: rgb(14, 14, 8) 2px solid;">
+            </thead>
+            <tbody id="table_body" class="border">
+            </tbody>
+        </table>
+    </div>
+
+    <script src="Rank_Card.js"></script>
+</body>
+</html>
